@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'homes#index'
+  resources :products
+  root 'products#index'
   devise_for :users
 
   resources :users, only: %i[index show]

@@ -17,7 +17,8 @@ module Sakurama
         helper_specs: false,
         routing_specs: false,
         # controller_specs: false,
-        request_specs: false
+        request_specs: false,
+        integration_tool: false
     end
   end
 end
