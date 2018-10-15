@@ -1,7 +1,6 @@
 %p#notice= notice
 
-%p
-  %b Name:
+%h1
   = @product.name
 %p
   %b Price:
@@ -9,14 +8,15 @@
 
 - if @product.image.attached?
   %p
-    =image_tag url_for(@product.image)
+    =image_tag url_for(@product.image), style: "width: 20rem;"
 - else
   %p
     画像がありません
 
 %p
-  %b Description:
-  = @product.description
+  %b 商品説明:
+  %p
+    = @product.description
 
 = link_to 'Edit', edit_product_path(@product)
 \|
