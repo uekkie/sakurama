@@ -1,0 +1,21 @@
+= form_tag charges_path do
+  %article
+    - if flash[:error].present?
+      #error_explanation
+        %p = flash[:error]
+    %label.amount
+      %span Amount: ￥500
+
+
+  = javascript_include_tag "https://checkout.stripe.com/checkout.js", |
+    class:"stripe-button", |
+    data: { |
+      key: "#{Rails.application.credentials.dig(:stripe, :publishable_key)}", |
+      description: "高級な🐟", |
+      image: "https://stripe.com/img/documentation/checkout/marketplace.png", |
+      label: "カードで支払う", |
+      name: "さくらま", |
+      amount: "500", |
+      locale: "ja", |
+      currency: "jpy", |
+      panel: { label: "500円のお支払い" }}
