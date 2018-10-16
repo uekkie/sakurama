@@ -6,11 +6,10 @@
   %b Price:
   = @product.price
 
-- if @product.image.attached?
-  %p
+%p
+  - if @product.image.attached?
     =image_tag url_for(@product.image), style: "width: 20rem;"
-- else
-  %p
+  - else
     画像がありません
 
 %p
