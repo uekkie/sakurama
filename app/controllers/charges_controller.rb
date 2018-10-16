@@ -8,14 +8,14 @@ class ChargesController < ApplicationController
     # Amount in cents
     @amount = 500
 
-    cusomer = Stripe::Customer.create(
+    customer = Stripe::Customer.create(
       email: params[:stripeEmail],
       source: params[:stripeToken]
     )
 
     charge = Stripe::Charge.create(
       customer: customer.id,
-      amount: @amount
+      amount: @amount,
       description: 'うまいさかな',
       currency: 'jpy'
     )
