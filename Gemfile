@@ -15,6 +15,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
+gem 'cancancan'
+gem 'rails_admin'
 gem 'haml-rails'
 gem 'rails-i18n', '~> 5.1'
 gem 'bootstrap', '~> 4.1.1'
