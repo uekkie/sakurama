@@ -15,6 +15,8 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 
 gem 'devise'
+gem 'cancancan'
+gem 'rails_admin'
 gem 'haml-rails'
 gem 'rails-i18n', '~> 5.1'
 gem 'bootstrap', '~> 4.1.1'
@@ -31,6 +33,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'rubocop', require: false
+   # rubocopの解析ルール設定
+  gem 'onkcop', require: false
 end
 
 group :test do
