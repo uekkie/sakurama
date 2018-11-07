@@ -6,6 +6,7 @@ Rails.application.routes.draw do
 
   resources :users, only: %i[index show]
 
+  resources :carts, only: %i[show]
+
   resources :charges
 end
-
