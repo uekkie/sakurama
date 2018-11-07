@@ -3,20 +3,20 @@
 %h1
   = @product.name
 %p
-  %b Price:
+  %b 価格:
   = @product.price
 
 %p
   - if @product.image.attached?
-    =image_tag url_for(@product.image), style: "width: 20rem;"
+    =image_tag url_for(@product.image), style: "width: 200px;"
   - else
     画像がありません
 
 %p
-  %b 商品説明:
+  %b 商品の説明:
   %p
     = @product.description
 
-= link_to 'Edit', edit_product_path(@product)
+= link_to '編集する', edit_product_path(@product)
 \|
-= link_to 'Back', products_path
+= link_to '戻る', products_path
