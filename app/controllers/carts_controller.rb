@@ -30,7 +30,7 @@ class CartsController < ApplicationController
 
   private
 
-  def setuo_cart_item!
-    @cart_item = current_cart.cart_items.find_by(product_id, parama[:product_id])
+  def setup_cart_item!
+    @cart_item = current_cart.cart_items.find_by(product_id, params[:product_id])
   end
 end

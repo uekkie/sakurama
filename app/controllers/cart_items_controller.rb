@@ -16,7 +16,7 @@ class CartItemsController < ApplicationController
   end
 
   def create
-    @cart_item = CartItem.new(cart_item_params)
+    @cart_item = current_cart
 
     respond_to do |format|
       if @cart_item.save
