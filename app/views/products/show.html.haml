@@ -15,6 +15,14 @@
   %p
     = @product.description
 
+.col-xs-4
+  = form_with add_item_path, remote: true do |f|
+    .input-group
+      = f.number_field :quantity, value: 1, class: "form-control", min: 1
+      .input-group-btn
+        = f.hidden_field :product_id, value: @product.id
+        = f.submit "Add to Cart", class: "btn btn-primary"
+
 = link_to '編集する', edit_product_path(@product)
 \|
 = link_to '戻る', products_path
