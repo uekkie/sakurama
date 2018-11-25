@@ -1,14 +1,11 @@
 %header
   %nav.navbar.navbar-expand-sm.navbar-light.bg-light
-    = link_to "さくらま", root_path, id: 'logo', class: "navbar-brand"
+    #logo.navbar-brand= link_to "さくらま", root_path
     %button.navbar-toggler{ data: {toggle: "collapse", target: "#Navber"}, aria: {controls: "Navber", expanded: "false", label: "ナビゲーションの切替"} }
       %span.navbar-toggler-icon
     .collapse.navbar-collapse#Navber
-      %ul.navbar-nav.mr-auto
+      %ul.navbar-nav.ml-auto
         %li.nav-item.active
-          = link_to "ホーム", root_path, class: "nav-link"
-      %ul.navbar-nav
-        %li.nav-item
           %li.nav-item= link_to 'ログイン', new_user_session_path, class: "btn btn-link"
         %li.nav-item
           %li.nav-item= link_to 'ユーザー登録', new_user_registration_path, class: "btn btn-success"
