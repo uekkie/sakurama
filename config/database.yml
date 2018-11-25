@@ -13,6 +13,4 @@ test:
 
 production:
   <<: *default
-  database: sakurama_production
-  username: sakurama
-  password: <%= ENV['SAKURAMA_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_URL'] %>
