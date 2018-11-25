@@ -1,22 +1,19 @@
-= form_for @product do |f|
-  - if @product.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@product.errors.count, "error")} prohibited this product from being saved:"
-      %ul
-        - @product.errors.full_messages.each do |message|
-          %li= message
+- if @product.errors.present?
+  %ul#error_explanation
+    - @product.errors.full_messages.each do |message|
+      %li= message
 
-  .field
+= form_for @product do |f|
+  .form-group
     = f.label :name
-    = f.text_field :name
-  .field
+    = f.text_field :name, class: 'form-control'
+  .form-group
     = f.label :price
-    = f.number_field :price
-  .field
+    = f.number_field :price, class: 'form-control'
+  .form-group
     = f.label :image
     = f.file_field :image
-  .field
+  .form-group
     = f.label :description
-    = f.text_field :description
-  .actions
-    = f.submit '保存'
+    = f.text_field :description, row: 5, class: 'form-control'
+  = f.submit nil, class: 'btn btn-primary'
