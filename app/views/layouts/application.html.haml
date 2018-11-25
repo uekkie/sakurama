@@ -8,8 +8,8 @@
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
     = render 'layouts/header'
-    %p.notice= notice
-    %p.alert= alert
     .container
+      - if flash.notice.present?
+        .alert.alert-success= flash.notice
       = yield
       = render 'layouts/footer'
