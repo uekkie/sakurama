@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe ProductsController, type: :controller do
-
   let(:valid_attributes) {
     skip("Add a hash of attributes valid for your model")
   }
