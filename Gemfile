@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 git_source(:github) do |repo_name|
-  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?('/')
   "https://github.com/#{repo_name}.git"
 end
 
@@ -24,7 +24,7 @@ gem 'turbolinks', '~> 5'
 gem 'uglifier', '>= 1.3.0'
 
 group :development, :test do
-  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'byebug', platforms: %i[mri mingw x64_mingw]
   gem 'pry-rails'
   gem 'sgcop', github: 'SonicGarden/sgcop'
 end
@@ -37,9 +37,9 @@ group :development do
 end
 
 group :test do
-  gem 'rspec-rails'
   gem 'capybara'
+  gem 'rspec-rails'
   gem 'webdrivers'
 end
 
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
