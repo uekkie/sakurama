@@ -6,7 +6,7 @@ Bundler.require(*Rails.groups)
 
 module Sakurama
   class Application < Rails::Application
-    config.load_defaults 5.1
+    config.load_defaults 6.1
     config.time_zone = 'Tokyo'
     config.i18n.default_locale = :ja
 
